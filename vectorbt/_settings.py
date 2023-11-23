@@ -769,22 +769,4 @@ Settings applied to `vectorbt.portfolio.base.Portfolio`.
 ```json
 {settings['portfolio'].to_doc()}
 ```
-
-__messaging__
-
-Settings applied across `vectorbt.messaging`.
-
-```json
-{settings['messaging'].to_doc()}
-```
-
-* telegram:
-    Settings applied to [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot).
-
-    Set `persistence` to string to use as `filename` in `telegram.ext.PicklePersistence`.
-    For `defaults`, see `telegram.ext.Defaults`. Other settings will be distributed across
-    `telegram.ext.Updater` and `telegram.ext.updater.Updater.start_polling`.
-
-* giphy:
-    Settings applied to [GIPHY Translate Endpoint](https://developers.giphy.com/docs/api/endpoint#translate).
 """

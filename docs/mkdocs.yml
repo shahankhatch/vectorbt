@@ -137,9 +137,6 @@ nav:
       - enums: api/labels/enums.md
       - generators: api/labels/generators.md
       - nb: api/labels/nb.md
-    - messaging:
-      - api/messaging/index.md
-      - telegram: api/messaging/telegram.md
     - ohlcv_accessors: api/ohlcv_accessors.md
     - portfolio:
       - api/portfolio/index.md
