@@ -549,21 +549,6 @@ settings = SettingsConfig(
                 )
             )
         ),
-        messaging=dict(
-            telegram=Config(  # flex
-                dict(
-                    token=None,
-                    use_context=True,
-                    persistence='telegram_bot.pickle',
-                    defaults=Config(),  # flex
-                    drop_pending_updates=True
-                )
-            ),
-            giphy=dict(
-                api_key=None,
-                weirdness=5
-            ),
-        ),
     ),
     copy_kwargs=dict(
         copy_mode='deep'
@@ -645,12 +630,12 @@ Settings applied across `vectorbt.data`.
 ```json
 {settings['data'].to_doc()}
 ```
-    
+
 * binance:
     See `binance.client.Client`.
 
 * ccxt:
-    See [Configuring API Keys](https://ccxt.readthedocs.io/en/latest/manual.html#configuring-api-keys). 
+    See [Configuring API Keys](https://ccxt.readthedocs.io/en/latest/manual.html#configuring-api-keys).
     Keys can be defined per exchange. If a key is defined at the root, it applies to all exchanges.
 
 __plotting__
@@ -786,7 +771,7 @@ Settings applied to `vectorbt.portfolio.base.Portfolio`.
 ```
 
 __messaging__
-    
+
 Settings applied across `vectorbt.messaging`.
 
 ```json
@@ -795,9 +780,9 @@ Settings applied across `vectorbt.messaging`.
 
 * telegram:
     Settings applied to [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot).
-    
+
     Set `persistence` to string to use as `filename` in `telegram.ext.PicklePersistence`.
-    For `defaults`, see `telegram.ext.Defaults`. Other settings will be distributed across 
+    For `defaults`, see `telegram.ext.Defaults`. Other settings will be distributed across
     `telegram.ext.Updater` and `telegram.ext.updater.Updater.start_polling`.
 
 * giphy:
